@@ -1,11 +1,11 @@
 ﻿#
-# Get-RemoteUserMappedDrives.ps1
+# Get-RemoteMappedDrive.ps1
 #
 
 # Using active directory module to find user account SID
 Import-Module ActiveDirectory
 
-Function Get-RemoteUserMappedDrive
+Function Get-RemoteMappedDrive
 {
 	PARAM (
 		[string]$ComputerName,
@@ -38,4 +38,4 @@ $ComputerName = 'MyComputer01'
 $UserName = 'User01'
 
 # Call Function
-Get-RemoteUserMappedDrive -ComputerName $ComputerName -UserName $UserName
+Get-RemoteMappedDrive -ComputerName $ComputerName -UserName $UserName
